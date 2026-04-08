@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #111;
+  color: white;
+}
+
+section {
+  padding: 40px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.evento {
+  margin: 20px;
+}
+
+img {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Línea central */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+}
+
+/* Evento */
+.evento {
+  padding: 20px;
+  position: relative;
+  width: 50%;
+}
+
+/* Izquierda */
+.evento:nth-child(odd) {
+  left: -14%;
+}
+
+/* Derecha */
+.evento:nth-child(even) {
+  left: 50%;
+}
+
+/* Punto */
+.evento::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: rgb(121, 204, 234);
+  border-radius: 50%;
+  top: 30px;
+  .evento:nth-child(even)::after {
+  left: -8px;
+  right: auto;
+}
+}
+
+/* Tarjeta */
+.contenido {
+  background: #222;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
